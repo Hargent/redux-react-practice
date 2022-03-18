@@ -1,4 +1,9 @@
 .product__list__container{
     display:inline-block;
+    box-sizing: border-box;
     width:25%;
+    float:left
+}
+.product__list{
+    
 }

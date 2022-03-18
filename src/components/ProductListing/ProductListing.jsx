@@ -36,7 +36,10 @@ function ProductListing() {
 
     return (
         <div className="product__list__container">
-            <Product/>
+            <div className="product__list col-4">
+                <Product/>
+            </div>
+            
         </div>
     )
 }
