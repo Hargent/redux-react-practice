@@ -1,8 +1,11 @@
+import './ProductListing.css'
+
 import React, {useEffect} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
-import Product from './Product';
+import {useDispatch, useSelector} from 'react-redux';
+
+import Product from '../Products/Product';
 import axios from 'axios';
-import {setProduct} from '../redux/actions/ProductActions'
+import {setProduct} from '../../redux/actions/ProductActions';
 
 function ProductListing() {
     const products = useSelector((state)=>state);
@@ -32,7 +35,7 @@ function ProductListing() {
     console.log("Products: ",products)
 
     return (
-        <div className="ui grid container">
+        <div className="product__list__container">
             <Product/>
         </div>
     )

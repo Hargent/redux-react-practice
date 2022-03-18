@@ -1,15 +1,16 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Header from './components/Header';
-import ProductListing from './components/ProductListing';
-import ProductDetails from './components/ProductDetails';
+import Header from './components/Header/Header';
+import ProductDetails from './components/ProductDetails/ProductDetails';
+import ProductListing from './components/ProductListing/ProductListing';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header/>
+        <div className="App__header">
+          <Header/>
+        </div>
         <Routes>
           <Route exact  path='/' element={<ProductListing/>} />
           <Route  exact path='/product/:productId' element={<ProductDetails/>}/>

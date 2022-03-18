@@ -8,9 +8,14 @@ export const setProduct = (products)=>{
     };
 };
 
-export const selectedProduct =(products)=>{
+export const selectedProduct =(product)=>{
     return{
         type:ActionTypes.SELECTED_PRODUCT,
-        item:products,
+        item:product,
+    };
+};
+export const removeSelectedProduct =()=>{
+    return{
+        type:ActionTypes.REMOVE_SELECTED_PRODUCT,
     };
 };
